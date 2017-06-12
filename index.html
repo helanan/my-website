@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" /> -->
+
 <style>
 body, h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -49,10 +51,8 @@ body, h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- Header -->
          <h1 class="animated loop shake" data-letters="Helana">Helana</h1>
   <header class="w3-container w3-center" style="padding:200px 16px" id="home">
-      <!-- <div style="margin-left: 150px; position: absolute;"> -->
-          <!-- <br /<div> -->
-
-    <p>Software Developer * Web Designer * Data Enthusiest</p>
+      <br />
+    <p>Software Developer * Web Designer * Data Enthusiast</p>
     <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
     <!-- <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
@@ -61,7 +61,9 @@ body, h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="container">
   <a class="btn btn-5">Download Resume</a>
   </div>
-
+  <br />
+  <br />
+<img src="images/down.png" alt="down-arrow" height="60" width="60" class="icon arrowhover bounce">
   </header>
 
   <!-- Portfolio Section -->
@@ -72,12 +74,30 @@ body, h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- Grid for photos -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
+        <h3>EDUMOTION</h3>
         <img src="/w3images/wedding.jpg" style="width:100%">
         <img src="/w3images/rocks.jpg" style="width:100%">
         <img src="/w3images/sailboat.jpg" style="width:100%">
       </div>
 
       <div class="w3-half">
+        <h3>PANDA PROSPECTING</h3>
+        <img src="/w3images/underwater.jpg" style="width:100%">
+        <img src="/w3images/chef.jpg" style="width:100%">
+        <img src="/w3images/wedding.jpg" style="width:100%">
+        <img src="/w3images/p6.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <h3>BANGAZON</h3>
+        <img src="/w3images/underwater.jpg" style="width:100%">
+        <img src="/w3images/chef.jpg" style="width:100%">
+        <img src="/w3images/wedding.jpg" style="width:100%">
+        <img src="/w3images/p6.jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <h3>PINTERESTING</h3>
         <img src="/w3images/underwater.jpg" style="width:100%">
         <img src="/w3images/chef.jpg" style="width:100%">
         <img src="/w3images/wedding.jpg" style="width:100%">
@@ -95,19 +115,101 @@ body, h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>Why software design and development? <br />
 To answer this question is easy....I was made to do this! <br />At a young age I embarked on a journey to become a New York Times best-selling author and a world-renowned music journalist but after countless nights of editing articles and breaking wires on my drum kit, I found myself doing more debugging, command line trial and error and dealing with floppy-disk drama then what I originally had set out to do. I came to the realization that my true talents can be found in the inner workings of a computer screen. Writing has remained a real passion of mine but now has been transformed into a different language, a language primarily written in Python, Javascript and Angular. I've gone from telling stories about complex software programs built by some of the best developers on the market to designing code of my own built off of the lessons I have learned from my previous coworkers as well as from the amazing teachers I've turned to while attending NSS. I can now say I am a true craftsman of eloquent code written in a language that paints pictures in data.
     </p>
-    <h3 class="w3-padding-16">My Skills</h3>
-    <p class="w3-wide">Python</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
-    </div>
-    <p class="w3-wide">Angular</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
-    </div>
-    <p class="w3-wide">Javascript</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
-    </div><br>
+    <h3 class="w3-padding-16"> My Technologies & Skills</h3>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a technology or skill.." title="Type in a name">
+
+<!-- table start -->
+<table class="highlight responsive-table" id="myTable">
+  <thead>
+  <tr class="header">
+    <th style="width:10%;"></th>
+    <th style="width:90%;"></th>
+  </thead>
+
+  <tbody>
+  </tr>
+  <tr>
+    <td >Javascript</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494435192/1494453148_code-programming-javascript-software-develop-command-language_wowaeu.svg"width="25px" /></td>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354806/1494371659_Python_logo_ef4m5q.svg" width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Angular</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494371742_angular_x28onq.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>SQL</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494371861_48_-_SQL_bypqb3.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>jQuery</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494371674_jquery_n6he6m.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Django</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494432129/django_icon_p1pidj.png"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>HTML5</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494372077_HTML5_orbcdp.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>CSS3</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354810/1494372097_css3_icon_ayfkbs.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Bootstrap</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354810/1494372119_bootstrap_icon_llnnl5.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Materialize</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372422_Adobe_Experience_Design_CC_Creative_Cloud_odoudt.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Sass</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354811/1494372190_sass_vmn2oo.svg"width="25px"/></td>
+  </tr>
+  <tr>
+    <td>Github</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354811/1494372209_mark-github_bwkjjk.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Firebase</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354812/1494372221_google_firebase_ml06bx.svg"width="25px"/></td>
+  </tr>
+  <tr>
+    <td>Photoshop</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372319_photoshop_llfovp.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Illustrator</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354816/1494372334_illustrator_etn7n2.svg" width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Lightroom</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372320_lightroom_vllg0o.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>InDesign</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372331_indesign_oqc3o4.svg" width="20px"</td>
+  </tr>
+  <tr>
+    <td>Experience Design</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372422_Adobe_Experience_Design_CC_Creative_Cloud_odoudt.svg"width="20px"/></td>
+  </tr>
+  <tr>
+    <td>Salesforce SOQL</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494434896/salesforce1600_tmh2hv.png" width="20px"/></td>
+  </tr>
+  <tr>
+    <td>DreamWeaver</td>
+    <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px"/></td>
+  </tr>
+</tbody>
+</table>
 
     <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
       <div class="w3-quarter w3-section">
@@ -128,32 +230,19 @@ To answer this question is easy....I was made to do this! <br />At a young age I
       </div>
     </div>
 
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Resume
-    </button>
-
     <!-- Testimonials -->
     <h3 class="w3-padding-24">My Reputation</h3>
     <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-text-black w3-margin-right">Chandler Bing.</span> Web Designer.</p>
-    <p>Jane Doe is just awesome. I am so happy to have met her!</p><br>
+    <p><span class="w3-large w3-text-black w3-margin-right">Bill Gates.</span> King of the Internet.</p>
+    <p>Helana is just awesome! She showed me how to implement a maze screensaver on my Windows 98 computer and it was life changing!</p><br>
 
     <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-text-black w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
-    <p>Jane Doe saved us from a web disaster.</p><br>
+    <p><span class="w3-large w3-text-black w3-margin-right">Donald Trump.</span> President.</p>
+    <p>She puts the C in Cfeve.</p><br>
 
     <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-text-black w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
-    <p>No one is better than Jane Doe.</p><br>
-
-    <!-- Grid for pricing tables -->
-    <h3 class="w3-padding-16">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      </div>
-
-      <div class="w3-half">
-      </div>
-    <!-- End Grid/Pricing tables -->
+    <p><span class="w3-large w3-text-black w3-margin-right">Charlie Day.</span> CEO of Sanitation at Paddy's Pub.</p>
+    <p>MEEEEEEOW!</p><br>
     </div>
 
   <!-- End About Section -->
@@ -170,7 +259,7 @@ To answer this question is easy....I was made to do this! <br />At a young age I
     </div>
 
      <!-- Google Map -->
-    <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:300px;margin:36px 0;"></div>
+    <div id="googleMap" class="w3-greyscale-max" style="width:50%;height:300px;margin:36px 0;"></div>
 
     <p>Lets get in touch. Send me a message:</p>
     <form action="/action_page.php" target="_blank">
@@ -199,26 +288,8 @@ To answer this question is easy....I was made to do this! <br />At a young age I
   </footer>
 
 <!-- END PAGE CONTENT -->
-</div>
 
-<!-- Add Google Maps -->
-<script>
-// Open and close sidebar
-function openNav() {
-    document.getElementById("mySidebar").style.width = "60%";
-    document.getElementById("mySidebar").style.display = "block";
-}
-
-function closeNav() {
-    document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<script src="js/main.js"
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+<script src="js/main.js"></script>
 
 </body>
 </html>
