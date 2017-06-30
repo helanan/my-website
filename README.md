@@ -1,4 +1,4 @@
-#My personal website
+# My personal website
 ## Technologies used:
 - HTML & CSS
 - Materialize
