@@ -4,7 +4,7 @@
 - Materialize
 - Sass
 
-##Packages Used
+## Packages Used
 - Materialize Themes
 - Scroll Magic
 - Tween Max
