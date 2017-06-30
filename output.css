@@ -119,4 +119,8 @@ h2 {
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; }
 
+.pricing-table {
+  margin-top: 450px;
+  border: 2px solid #1de9c3; }
+
 /*# sourceMappingURL=output.css.map */
