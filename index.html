@@ -21,6 +21,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" /> -->
 
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101949055-1', 'auto');
+  ga('send', 'pageview');
+  ga('set', 'userId', {{USER_ID}});
+
+</script>
+
 </head>
 
 <!-- <style>
@@ -45,6 +58,55 @@
         min-height: 100%;
     }
 </style> -->
+
+<style>
+#table_one,
+#table_two,
+#table_three {
+    background-color: white;
+}
+
+.icon-paper-plane {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#pricing_section {
+    color: black;
+}
+
+/*#pricing_section {
+    margin-top: 300px;
+    margin-bottom: 200px;
+}
+
+#pricing_div {
+    margin-top: 300px;
+    margin-bottom: 200px;
+}
+
+#pricing_row {
+    margin-top: 300px;
+    margin-bottom: 200px;
+}
+
+#section_one {
+    margin-top: -200px;
+}*/
+
+.section {
+    height: 170% !important;
+}
+
+.pricing-header i {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+input[type=text] {
+    border-color: rgb(233, 30, 99) !important;
+    color: #1de9c3 !important;
+}
+
+</style>
 
 <body>
     <!-- Navbar -->
@@ -102,7 +164,7 @@
           <div class="header-wrapper row valign-wrapper">
             <div class="col s12 m8 offset-m2">
               <h1>HELANA NOSRAT</h1>
-              <span class="tagline">Software Developer * Web Designer * Data Enthusiast</span>
+              <span class="tagline animated fadeInLeft">Software Developer * Web Designer * Data Enthusiast</span>
               <button class="read-more"><i class="icon-caret-down"></i></button>
             </div>
           </div>
@@ -114,7 +176,9 @@
             <div class="col s12 m8 offset-m2">
               <h1>RESUME</h1>
               <span class="tagline">DOWNLOAD RESUME</span>
-              <button class="read-more"><i class="icon-caret-down"></i></button>
+              <form method="get" action="https://drive.google.com/file/d/0B7vtjEa6t9JKVWVadVRIZUYxTk0/view?usp=sharing">
+              <button type="submit" class="read-more animated infinite tada"><i class="icon-caret-down"></i></button>
+                </form>
             </div>
           </div>
         </div>
@@ -123,31 +187,32 @@
 <!-- Features -->
  <div class="section background-layer valign-wrapper">
         <div class="container">
-          <div class="row">
-            <div class="col s12"><h2 class="section-title">Features</h2></div>
+          <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9">
+            <div class="col s12 fade-in-out"><h2 class="section-title">About Me</h2></div>
             <div class="col s12 m6 l4">
-              <h4><i class="icon-light-bulb"></i></h4>
+              <h4><i><img src="images/015-smile.svg" width="35"/></i></h4>
+              <p class="caption">Why software design and development? 
+To answer this question is easy....I was made to do this! At a young age I embarked on a journey to become a New York Times best-selling author and a world-renowned music journalist but after countless nights of editing articles and breaking wires on my drum kit, I found myself doing more debugging, command line trial and error and dealing with floppy-disk drama then what I originally had set out to do. I came to the realization that my true talents can be found in the inner workings of a computer screen. Writing has remained a real passion of mine but now has been transformed into a different language, a language primarily written in Python and Javascript. I've gone from telling stories about complex software programs built by some of the best developers on the market to designing code of my own built off of the lessons I have learned from my previous coworkers as well as from the amazing teachers I've turned to while attending NSS. I can now say I am a true craftsman of eloquent code written in a language that paints pictures in data. </p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4><i><img src="images/005-heart.svg" width="35"/></i></h4>
               <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
             </div>
             <div class="col s12 m6 l4">
-              <h4><i class="icon-bolt"></i></h4>
+              <h4><i><img src="images/024-zoom.svg" width="35"/></i></h4>
               <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
             </div>
             <div class="col s12 m6 l4">
-              <h4><i class="icon-rocket"></i></h4>
+              <h4><i><img src="images/007-trophy.svg" width="35"/></i></h4>
               <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
             </div>
             <div class="col s12 m6 l4">
-              <h4><i class="icon-settings"></i></h4>
+              <h4><i><img src="images/042-folder.svg" width="35"/></i></h4>
               <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
             </div>
             <div class="col s12 m6 l4">
-              <h4><i class="icon-umbrella"></i></h4>
-              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
-            </div>
-            <div class="col s12 m6 l4">
-              <h4><i class="icon-compass"></i></h4>
-              <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+              <h4><i><img src="images/041-bar-chart.svg" width="35"/></i></h4>
+              <p class="caption">The 2015 World Quality Report states that 92 percent of organizations are applying mobile testing, check out some Unit Testing Ive conducted here!</p>
             </div>
           </div>
         </div>
@@ -156,21 +221,15 @@
 
 
     <!-- Pricing Tables -->
-
-    <div class="section valign-wrapper">
-      <div class="container">
-        <div class="row">
-  
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-          <div class="col s12 m4">
-            <div class="pricing-table">
+ <h1 class="center-align">Technologies & Skills</h1>
+    <div id="pricing_section" class="section valign-wrapper">
+      <div id="pricing_div" class="container">
+        <div id="pricing_row" class="row">
+          <div id="section_one" class="col s12 m4">
+            <div id="table_one" class="pricing-table">
               <div class="pricing-header">
-                <i class="icon-paper-plane"></i>
-                <h4>TECHNOLOGIES</h4>
+                <i><img src="images/002-monitor.svg" width="30" class="icon-paper-plane"/></i>
+      <!--           <h4>TECHNOLOGIES</h4> -->
                <!--  <div class="price">
                   <span class="dollars">TECHNOLOGIES</span>
                 </div> -->
@@ -181,8 +240,8 @@
             <table class="highlight responsive-table" id="myTableOne">
                 <thead>
                     <tr class="header">
-                        <th style="width:10%;"></th>
-                        <th style="width:90%;"></th>
+                        <th style="width:50%;"></th>
+                        <th style="width:50%;"></th>
                 </thead>
 
                 <tbody>
@@ -225,10 +284,10 @@
           </div>
 
           <div class="col s12 m4">
-            <div class="pricing-table featured">
+            <div id="table_two" class="pricing-table">
               <div class="pricing-header">
-                <i class="icon-plane"></i>
-                <h4>&</h4>
+                <i><img src="images/009-star.svg" width="30" class="icon-plane"></i>
+  <!--               <h4>&</h4> -->
               </div>
               <input type="text" id="myInputTwo" onkeyup="filterTechSkillsTwo()" placeholder="Search for a technology or skill.." title="Type in a name">
 
@@ -236,8 +295,8 @@
             <table class="highlight responsive-table" id="myTableTwo">
                 <thead>
                     <tr class="header">
-                        <th style="width:10%;"></th>
-                        <th style="width:90%;"></th>
+                        <th style="width:50%;"></th>
+                        <th style="width:50%;"></th>
                 </thead>
 
                 <tbody>
@@ -280,10 +339,10 @@
           </div>
 
           <div class="col s12 m4">
-            <div class="pricing-table">
+            <div id="table_three" class="pricing-table">
               <div class="pricing-header">
-                <i class="icon-rocket"></i>
-                <h4>SKILLS</h4>
+                <i><img src="images/001-smartphone.svg" width="30" class="icon-rocket"></i>
+<!--                 <h4>SKILLS</h4> -->
               </div>
               <input type="text" id="myInputThree" onkeyup="filterTechSkillsThree()" placeholder="Search for a technology or skill.." title="Type in a name">
 
@@ -291,8 +350,8 @@
             <table class="highlight responsive-table" id="myTableThree">
                 <thead>
                     <tr class="header">
-                        <th style="width:10%;"></th>
-                        <th style="width:90%;"></th>
+                        <th style="width:50%;"></th>
+                        <th style="width:50%;"></th>
                 </thead>
 
                 <tbody>
@@ -326,21 +385,21 @@
     <div class="section light full-height">
       <div class="row">
         <div class="col s12 m10 offset-m1 center">
-          <h1>blog</h1>
+          <h1>Projects</h1>
           <div class="row masonry-grid">
             <div class="col s12 m4">
               <div class="card">
                 <div class="card-image">
-                  <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                  <span class="card-title">Something Interesting</span>
+                  <a href="blog.html"><img src="http://res.cloudinary.com/emma/image/upload/v1496892861/list_sjjgh5.jpg" width="400"></a>
+                  <span class="card-title">EduMotion</span>
                 </div>
               </div>
             </div>
             <div class="col s12 m4">
               <div class="card">
                 <div class="card-image">
-                  <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                  <span class="card-title">Another Blog Post</span>
+                  <a href="blog.html"><img src="http://res.cloudinary.com/emma/image/upload/v1498013877/panda-prospecting1_a7d46b.jpg" width="400"></a>
+                  <span class="card-title">Prospecting Panda</span>
                 </div>
               </div>
             </div>
@@ -386,7 +445,7 @@
       <div class="container">
         <form>
           <div class="row">
-            <div class="col s12"><h2 class="section-title">Contact Us</h2></div>
+            <div class="col s12"><h2 class="section-title">Contact Me</h2></div>
             <div class="input-field col s6">
               <input id="first_name" type="text">
               <label for="first_name">First Name</label>
@@ -398,7 +457,7 @@
             <div class="input-field col s12">
               <textarea id="message" class="materialize-textarea"></textarea>
               <label for="message">Message</label>
-              <a class="waves-effect waves-light btn-large">Button</a>
+              <a class="waves-effect waves-light btn-large">Submit</a>
             </div>
           </div>
         </form>
@@ -410,8 +469,6 @@
       <div class="container">
         <div class="row">
           <div class="col s6 m3">
-            <img class="materialize-logo" src="images/materialize-teal.png" alt="">
-            <p>Made with love by Materialize.</p>
           </div>
           <div class="col s6 m3">
             <h5>About</h5>
@@ -622,6 +679,10 @@
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/animation.gsap.min.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0cbca4d30815"></script> 
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0cbca4d30815"></script> 
+
+
 
     <!-- Initialization script -->
     <script src="js/startup.js"></script>
