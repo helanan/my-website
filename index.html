@@ -12,13 +12,14 @@
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- 
+<!--
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
  <!--    <link rel="stylesheet" href="/output.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito|Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css" />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" /> -->
 
     <!-- Google Analytics -->
@@ -37,29 +38,6 @@
 </head>
 
 
-<!-- <style>
-    body,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Montserrat", sans-serif
-    }
-
-    .w3-row-padding img {
-        margin-bottom: 12px
-    }
-
-    .bgimg {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url('/images/myprofilepic.jpg');
-        min-height: 100%;
-    }
-</style> -->
-
 <style>
 #table_one,
 #table_two,
@@ -74,25 +52,6 @@
 #pricing_section {
     color: black;
 }
-
-/*#pricing_section {
-    margin-top: 300px;
-    margin-bottom: 200px;
-}
-
-#pricing_div {
-    margin-top: 300px;
-    margin-bottom: 200px;
-}
-
-#pricing_row {
-    margin-top: 300px;
-    margin-bottom: 200px;
-}
-
-#section_one {
-    margin-top: -200px;
-}*/
 
 .section {
     height: 170% !important;
@@ -117,7 +76,7 @@ input[type=text] {
     <!-- Navbar -->
     <nav class="navbar dark">
       <div class="nav-wrapper">
-        <a href="horizontal-half.html" class="brand-logo"><i class="icon-diamond"></i></a>
+        <a href="horizontal-half.html" class="brand-logo"><img src="/images/013-coding.svg"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="active"><a class="dropdown-button" href="#!" data-activates="pages" data-constrainWidth="false" data-belowOrigin="true">Home<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="#">My Projects</a></li>
@@ -129,6 +88,11 @@ input[type=text] {
         <ul id="pages" class="dropdown-content">
           <li><a href="#">Edumotion</a></li>
           <li><a href="#">Panda Prospecting</a></li>
+          <li><a href="#">TSC Dashboard</a></li>
+          <li><a href="#">Data Manipulation</a></li>
+          <li><a href="#">Flash Cards</a></li>
+          <li><a href="#">Blog Posts</a></li>
+          <li><a href="#">Design</a></li>
         </ul>
 
         <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons black-text">menu</i></a>
@@ -153,7 +117,7 @@ input[type=text] {
       <li><a class="waves-effect waves-teal" href="#">Home</a></li>
       <li><a class="waves-effect waves-teal" href="#">My Projects</a></li>
       <li><a class="waves-effect waves-teal" href="team.html">About</a></li>
-      <li><a class="waves-effect waves-teal" href="#">Technologies & Skills</a></li> 
+      <li><a class="waves-effect waves-teal" href="#">Technologies & Skills</a></li>
       <li><a class="waves-effect waves-teal" href="#">Contact Me</a></li>
     </ul>
 
@@ -164,7 +128,7 @@ input[type=text] {
           <div class="header-wrapper row valign-wrapper">
             <div class="col s12 m8 offset-m2">
               <h1>HELANA NOSRAT</h1>
-              <span class="tagline animated fadeInLeft">Software Developer * Web Designer * Data Enthusiast</span>
+              <span class="tagline animated fadeInLeft">Software Engineer * Web Development * Data Enthusiast</span>
               <button class="read-more"><i class="icon-caret-down"></i></button>
             </div>
           </div>
@@ -239,10 +203,6 @@ To answer this question is easy....I was made to do this! At a young age I embar
             <div id="table_one" class="pricing-table">
               <div class="pricing-header">
                 <i><img src="images/002-monitor.svg" width="30" class="icon-paper-plane"/></i>
-      <!--           <h4>TECHNOLOGIES</h4> -->
-               <!--  <div class="price">
-                  <span class="dollars">TECHNOLOGIES</span>
-                </div> -->
               </div>
             <input type="text" id="myInputOne" onkeyup="filterTechSkillsOne()" placeholder="Search for a technology or skill.." title="Type in a name">
 
@@ -281,7 +241,28 @@ To answer this question is easy....I was made to do this! At a young age I embar
                         <td><img src="https://res.cloudinary.com/emma/image/upload/v1494432129/django_icon_p1pidj.png" width="20px" /></td>
                     </tr>
                     <tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494432129/django_icon_p1pidj.png" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494432129/django_icon_p1pidj.png" width="20px" /></td>
+                    </tr>
+                    <tr>
                         <td>HTML5</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494372077_HTML5_orbcdp.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Linux</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494372077_HTML5_orbcdp.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Unix</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494372077_HTML5_orbcdp.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Ubuntu</td>
                         <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354807/1494372077_HTML5_orbcdp.svg" width="20px" /></td>
                     </tr>
                     <tr>
@@ -343,6 +324,26 @@ To answer this question is easy....I was made to do this! At a young age I embar
                         <td>Lightroom</td>
                         <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372320_lightroom_vllg0o.svg" width="20px" /></td>
                     </tr>
+                    <tr>
+                        <td>GitLab</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372320_lightroom_vllg0o.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>RabbitMQ</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372320_lightroom_vllg0o.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>NGINX</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372320_lightroom_vllg0o.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Talend ODS</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372320_lightroom_vllg0o.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>IBM Watson</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354815/1494372320_lightroom_vllg0o.svg" width="20px" /></td>
+                    </tr>
                 </tbody>
             </table>
             </div>
@@ -380,6 +381,46 @@ To answer this question is easy....I was made to do this! At a young age I embar
                     </tr>
                     <tr>
                         <td>DreamWeaver</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Jira</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Confluence</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Trello</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Postman</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Fiddler</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>SQL Developer</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Notepad ++</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Netezza</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>Oracle</td>
+                        <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
+                    </tr>
+                    <tr>
+                        <td>SAP</td>
                         <td><img src="https://res.cloudinary.com/emma/image/upload/v1494354818/1494372337_dreamweaver_jjcicl.svg" width="20px" /></td>
                     </tr>
                 </tbody>
@@ -503,182 +544,13 @@ To answer this question is easy....I was made to do this! At a young age I embar
               <li><a href="https://www.behance.com/helananosrat">Behance</a></li>
               <li><a href="https://dribbble.com/HelanaNN">Dribbble</a></li>
               <li><a href="https://twitter.com/helanann">Twitter</a></li>
-  
+
 
             </ul>
           </div>
         </div>
       </div>
     </footer>
-
-
-
-    <!-- Sidebar with image -->
-   <!--  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-        <div class="bgimg"></div>
-    </nav> -->
-
-    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-    <!-- <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-        <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-            <i class="fa fa-remove"></i>
-        </a>
-        <div class="w3-bar-block w3-center">
-            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-            <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
-            <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
-        </div>
-    </nav> -->
-
-    <!-- Page Content -->
-<!--     <div class="w3-main w3-padding-large" style="margin-left:40%"> -->
-
-        <!-- Menu icon to open sidebar -->
-        <!-- <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span> -->
-
-        <!-- Header -->
-       <!--  <h1 class="animated loop shake" data-letters="Helana">Helana</h1>
-        <header class="w3-container w3-center" style="padding:200px 16px" id="home">
-            <br />
-            <div class="container">
-                <form method="get" action="https://drive.google.com/file/d/0B7vtjEa6t9JKVWVadVRIZUYxTk0/view?usp=sharing">
-                    <button type="submit" class="btn btn-5">Download Resume</button>
-                </form>
-            </div>
-            <br />
-            <br />
-            <img src="images/down.png" alt="down-arrow" height="60" width="60" class="icon arrowhover bounce">
-        </header> -->
-
-        <!-- Portfolio Section -->
- <!--        <div class="w3-padding-32 w3-content" id="portfolio">
-            <h2 class="w3-text-grey">My Projects</h2>
-            <hr class="w3-opacity">
- -->
-            <!-- Grid for photos -->
-          <!--   <div class="w3-row-padding" style="margin:0 -16px">
-                <div class="w3-half">
-                    <h3><a href="https://www.edumotionapp.com">EDUMOTION</a></h3>
-                    <p>An Angular built, Firebase hosted, front-end application that focuses on helping teachers in the classroom log students emotional state after each classroom activity in order to track emotional success. With this project I utilized
-                        CRUD functionality within a single-page application to maintain ease-of-use for teachers but still give the users ability to perform complex actions like editing, posting, retreving and analyzing data. Overall, EduMotion aims to
-                        provide teachers with the ability to reduce the hypothesis space and form higher granulairty into student observations. </p>
-                    <ul>TECHNOLOGIES USED:
-                        <li>Firebase Database & API</li>
-                        <li>JQuery</li>
-                        <li>Angular 1.6</li>
-                        <li>Adorable Avatars API</li>
-                        <li>JavaScript</li>
-                        <li>Chart JS</li>
-                    </ul>
-                    <img src="http://res.cloudinary.com/emma/image/upload/v1496892861/list_sjjgh5.jpg" style="width:100%" height="400px">
-                </div>
-
-                <div class="w3-half">
-                    <h3><a href="https://github.com/helanan/Panda_Prospecting">PANDA PROSPECTING</a></h3>
-                    <p>Built with a Python back-end and utilizing SQL based queries, Panda Prospecting is a database management application created to make sales prospecting easier and more streamlined. The Django framework built application includes features
-                        like user authentication, data filtering, adding and deleting data from application by user, and form data manipulation.</p>
-                    <ul>TECHNOLOGIES USED:
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>PyGal</li>
-                        <li>D3</li>
-                        <li>Materialize</li>
-                        <li>Matplotlib</li>
-                    </ul>
-                    <img src="http://res.cloudinary.com/emma/image/upload/v1498013877/panda-prospecting1_a7d46b.jpg" style="width:100%" height="400px">
-                </div>
-            </div> -->
-            <!-- End Portfolio Section -->
-      <!--   </div> -->
-
-        <!-- About Section -->
-   <!--      <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-            <h2>About</h2>
-            <hr class="w3-opacity">
-            <p>Why software design and development? <br /> To answer this question is easy....I was made to do this! <br />At a young age I embarked on a journey to become a New York Times best-selling author and a world-renowned music journalist but after
-                countless nights of editing articles and breaking wires on my drum kit, I found myself doing more debugging, command line trial and error and dealing with floppy-disk drama then what I originally had set out to do. I came to the realization
-                that my true talents can be found in the inner workings of a computer screen. Writing has remained a real passion of mine but now has been transformed into a different language, a language primarily written in Python, Javascript and Angular.
-                I've gone from telling stories about complex software programs built by some of the best developers on the market to designing code of my own built off of the lessons I have learned from my previous coworkers as well as from the amazing
-                teachers I've turned to while attending NSS. I can now say I am a true craftsman of eloquent code written in a language that paints pictures in data.
-            </p> -->
-           
-
-           <!--  <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
-                <div class="w3-quarter w3-section">
-                    <span class="w3-xlarge">3+</span><br> Years of Start-Up<br /> experience
-                </div>
-                <div class="w3-quarter w3-section">
-                    <span class="w3-xlarge">1,021+</span><br> Github Commits
-                </div>
-                <div class="w3-quarter w3-section">
-                    <span class="w3-xlarge">6+</span><br> Years on Github
-                </div>
-                <div class="w3-quarter w3-section">
-                    <span class="w3-xlarge">6</span><br> Languages
-                </div>
-            </div> -->
-
-            <!-- Testimonials -->
-            <!-- <h3 class="w3-padding-24">My Reputation</h3>
-            <img src="/images/bill-gates.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-            <p><span class="w3-large w3-text-black w3-margin-right">Bill Gates.</span> King of the Internet.</p>
-            <p>Helana is just awesome! She showed me how to implement a maze screensaver on my Windows 98 computer and it was life changing!</p><br>
-
-            <img src="/images/Donald-Trump.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-            <p><span class="w3-large w3-text-black w3-margin-right">Donald Trump.</span> President.</p>
-            <p>She puts the C in Cfeve.</p><br>
-
-            <img src="/images/charlie.svg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-            <p><span class="w3-large w3-text-black w3-margin-right">Charlie Day.</span> CEO of Sanitation at Paddy's Pub.</p>
-            <p>MEEEEEEOW!</p><br>
-        </div> -->
-
-        <!-- End About Section -->
-  <!--   </div> -->
-
-    <!-- Contact Section -->
-    <!-- <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
-        <h2>Contact Me</h2>
-        <hr class="w3-opacity">
-
-        <div class="w3-section">
-            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Nashville, TN</p>
-            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> 267-443-8860</p>
-            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: helanan@gmail.com</p>
-        </div>
- -->
-        <!-- Google Map -->
-        <!-- div id="googleMap" class="w3-greyscale-max" style="width:100%;height:300px;margin:36px 0;"></div>
-
-        <p>Lets get in touch. Send me a message:</p>
-        <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
-            <p>
-                <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-             <i class="fa fa-paper-plane"></i> SEND MESSAGE
-           </button>
-            </p>
-        </form> -->
-        <!-- End Contact Section -->
-   <!--  </div> -->
-
-    <!-- Footer -->
-   <!--  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i> -->
-        <!-- End footer -->
-<!--     </footer> -->
-
-    <!-- END PAGE CONTENT -->
-   <!--  </div> -->
 
     <script src="js/main.js"></script>
 
@@ -692,8 +564,9 @@ To answer this question is easy....I was made to do this! At a young age I embar
     <script src="js/TweenMax.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/animation.gsap.min.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0cbca4d30815"></script> 
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0cbca4d30815"></script> 
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0cbca4d30815"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595b0cbca4d30815"></script>
 
 
 
