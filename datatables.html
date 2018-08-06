@@ -1,0 +1,635 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Helana Nosrat</title>
+
+    <link rel="stylesheet" href="css/startup-materialize.min.css">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+ <!--    <link rel="stylesheet" href="/output.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="datatables.html">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" /> -->
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101949055-1', 'auto');
+  ga('send', 'pageview');
+  ga('set', 'userId', {{USER_ID}});
+
+</script>
+
+</head>
+<style>/*
+ * Table styles
+ */
+table.dataTable {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  border-collapse: separate;
+  border-spacing: 4px;
+  /*
+   * Header and footer styles
+   */
+  /*
+   * Body styles
+   */ }
+  table.dataTable thead th,
+  table.dataTable tfoot th {
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+  }
+  table.dataTable thead th,
+  table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 1px none #faf7f7; }
+    table.dataTable thead th:active,
+    table.dataTable thead td:active {
+      outline: none; }
+  table.dataTable tfoot th,
+  table.dataTable tfoot td {
+    padding: 10px 18px 6px 18px;
+    border-top: 1px none #faf7f7; }
+  table.dataTable thead .sorting,
+  table.dataTable thead .sorting_asc,
+  table.dataTable thead .sorting_desc,
+  table.dataTable thead .sorting_asc_disabled,
+  table.dataTable thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+    background-repeat: no-repeat;
+    background-position: center right; }
+  table.dataTable thead .sorting {
+    background-image: url("../images/devices/017-database-4.png");
+  background-size: 20px;}
+  table.dataTable thead .sorting_asc {
+    background-image: url("../images/devices/017-database-4.png"); background-size: 20px; }
+  table.dataTable thead .sorting_desc {
+    background-image: url("../images/devices/016-database-5.png"); background-size: 20px;  }
+  table.dataTable thead .sorting_asc_disabled {
+    background-image: url("../images/devices/015-database-6.png"); background-size: 20px;}
+  table.dataTable thead .sorting_desc_disabled {
+    background-image: url("../images/devices/014-database-7.png"); background-size: 20px;}
+  table.dataTable tbody tr {
+    font-family: 'Nunito', sans-serif;
+    background-color: #70c7b6;
+
+  }
+    table.dataTable tbody tr.selected {
+      background-color: #0f0f0f;
+    }
+  table.dataTable tbody th,
+  table.dataTable tbody td {
+        border-radius: 30px;
+        padding: 10px 10px;
+      }
+  table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
+    border-top: px none #70c7b6;
+  }
+  table.dataTable.row-border tbody tr:first-child th,
+  table.dataTable.row-border tbody tr:first-child td, table.dataTable.display tbody tr:first-child th,
+  table.dataTable.display tbody tr:first-child td {
+    border-top: none;
+  }
+  table.dataTable.cell-border tbody th, table.dataTable.cell-border tbody td {
+    border-top: px none #70c7b6;
+    border-right: px none #70c7b6;
+  }
+  table.dataTable.cell-border tbody tr th:first-child,
+  table.dataTable.cell-border tbody tr td:first-child {
+    border-left: px none #70c7b6;
+  }
+  table.dataTable.cell-border tbody tr:first-child th,
+  table.dataTable.cell-border tbody tr:first-child td {
+    border-top: none;
+  }
+  table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: #6dc2b1;
+  }
+    table.dataTable.stripe tbody tr.odd.selected, table.dataTable.display tbody tr.odd.selected {
+      background-color: #0e0e0e;
+    }
+  table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+    background-color: #6bbfaf;
+  }
+    table.dataTable.hover tbody tr:hover.selected, table.dataTable.display tbody tr:hover.selected {
+      background-color: #0e0e0e;
+    }
+  table.dataTable.order-column tbody tr > .sorting_1,
+  table.dataTable.order-column tbody tr > .sorting_2,
+  table.dataTable.order-column tbody tr > .sorting_3, table.dataTable.display tbody tr > .sorting_1,
+  table.dataTable.display tbody tr > .sorting_2,
+  table.dataTable.display tbody tr > .sorting_3 {
+    background-color: #6dc3b2;
+  }
+  table.dataTable.order-column tbody tr.selected > .sorting_1,
+  table.dataTable.order-column tbody tr.selected > .sorting_2,
+  table.dataTable.order-column tbody tr.selected > .sorting_3, table.dataTable.display tbody tr.selected > .sorting_1,
+  table.dataTable.display tbody tr.selected > .sorting_2,
+  table.dataTable.display tbody tr.selected > .sorting_3 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+    background-color: #69bcac;
+  }
+  table.dataTable.display tbody tr.odd > .sorting_2, table.dataTable.order-column.stripe tbody tr.odd > .sorting_2 {
+    background-color: #6abdad;
+  }
+  table.dataTable.display tbody tr.odd > .sorting_3, table.dataTable.order-column.stripe tbody tr.odd > .sorting_3 {
+    background-color: #6bbfae;
+  }
+  table.dataTable.display tbody tr.odd.selected > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_1 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.display tbody tr.odd.selected > .sorting_2, table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_2 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.display tbody tr.odd.selected > .sorting_3, table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_3 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.display tbody tr.even > .sorting_1, table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+    background-color: #6dc3b2;
+  }
+  table.dataTable.display tbody tr.even > .sorting_2, table.dataTable.order-column.stripe tbody tr.even > .sorting_2 {
+    background-color: #6ec4b3;
+  }
+  table.dataTable.display tbody tr.even > .sorting_3, table.dataTable.order-column.stripe tbody tr.even > .sorting_3 {
+    background-color: #6fc6b5;
+  }
+  table.dataTable.display tbody tr.even.selected > .sorting_1, table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_1 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.display tbody tr.even.selected > .sorting_2, table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_2 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.display tbody tr.even.selected > .sorting_3, table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_3 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.display tbody tr:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+    background-color: #66b6a7;
+  }
+  table.dataTable.display tbody tr:hover > .sorting_2, table.dataTable.order-column.hover tbody tr:hover > .sorting_2 {
+    background-color: #67b8a8;
+  }
+  table.dataTable.display tbody tr:hover > .sorting_3, table.dataTable.order-column.hover tbody tr:hover > .sorting_3 {
+    background-color: #68baaa;
+  }
+  table.dataTable.display tbody tr:hover.selected > .sorting_1, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_1 {
+    background-color: #0d0d0d;
+  }
+  table.dataTable.display tbody tr:hover.selected > .sorting_2, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_2 {
+    background-color: #0d0d0d;
+  }
+  table.dataTable.display tbody tr:hover.selected > .sorting_3, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3 {
+    background-color: #0e0e0e;
+  }
+  table.dataTable.no-footer {
+    border-bottom: 1px none #faf7f7;
+  }
+  table.dataTable.nowrap th, table.dataTable.nowrap td {
+    white-space: nowrap;
+  }
+  table.dataTable.compact thead th,
+  table.dataTable.compact thead td {
+    padding: 4px 17px 4px 4px; }
+  table.dataTable.compact tfoot th,
+  table.dataTable.compact tfoot td {
+    padding: 4px;
+  }
+  table.dataTable.compact tbody th,
+  table.dataTable.compact tbody td {
+    padding: 4px; }
+  table.dataTable th.dt-left,
+  table.dataTable td.dt-left {
+    text-align: left; }
+  table.dataTable th.dt-center,
+  table.dataTable td.dt-center,
+  table.dataTable td.dataTables_empty {
+    text-align: center; }
+  table.dataTable th.dt-right,
+  table.dataTable td.dt-right {
+    text-align: right; }
+  table.dataTable th.dt-justify,
+  table.dataTable td.dt-justify {
+    text-align: justify; }
+  table.dataTable th.dt-nowrap,
+  table.dataTable td.dt-nowrap {
+    white-space: nowrap; }
+  table.dataTable thead th.dt-head-left,
+  table.dataTable thead td.dt-head-left,
+  table.dataTable tfoot th.dt-head-left,
+  table.dataTable tfoot td.dt-head-left {
+    text-align: left; }
+  table.dataTable thead th.dt-head-center,
+  table.dataTable thead td.dt-head-center,
+  table.dataTable tfoot th.dt-head-center,
+  table.dataTable tfoot td.dt-head-center {
+    text-align: center; }
+  table.dataTable thead th.dt-head-right,
+  table.dataTable thead td.dt-head-right,
+  table.dataTable tfoot th.dt-head-right,
+  table.dataTable tfoot td.dt-head-right {
+    text-align: right; }
+  table.dataTable thead th.dt-head-justify,
+  table.dataTable thead td.dt-head-justify,
+  table.dataTable tfoot th.dt-head-justify,
+  table.dataTable tfoot td.dt-head-justify {
+    text-align: justify; }
+  table.dataTable thead th.dt-head-nowrap,
+  table.dataTable thead td.dt-head-nowrap,
+  table.dataTable tfoot th.dt-head-nowrap,
+  table.dataTable tfoot td.dt-head-nowrap {
+    white-space: nowrap; }
+  table.dataTable tbody th.dt-body-left,
+  table.dataTable tbody td.dt-body-left {
+    text-align: left; }
+  table.dataTable tbody th.dt-body-center,
+  table.dataTable tbody td.dt-body-center {
+    text-align: center; }
+  table.dataTable tbody th.dt-body-right,
+  table.dataTable tbody td.dt-body-right {
+    text-align: right; }
+  table.dataTable tbody th.dt-body-justify,
+  table.dataTable tbody td.dt-body-justify {
+    text-align: justify; }
+  table.dataTable tbody th.dt-body-nowrap,
+  table.dataTable tbody td.dt-body-nowrap {
+    white-space: nowrap; }
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+  box-sizing: content-box; }
+
+/*
+ * Control feature layout
+ */
+.dataTables_wrapper {
+  position: relative;
+  clear: both;
+  *zoom: 1;
+  zoom: 1; }
+  .dataTables_wrapper .dataTables_length {
+    float: left; }
+  .dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right; }
+    .dataTables_wrapper .dataTables_filter input {
+      margin-left: 0.5em; }
+  .dataTables_wrapper .dataTables_info {
+    clear: both;
+    float: left;
+    padding-top: 0.755em; }
+  .dataTables_wrapper .dataTables_paginate {
+    float: right;
+    text-align: right;
+    padding-top: 0.25em; }
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+      box-sizing: border-box;
+      display: inline-block;
+      min-width: 1.5em;
+      padding: 0.5em 1em;
+      margin-left: 2px;
+      text-align: center;
+      text-decoration: none !important;
+      cursor: pointer;
+      *cursor: hand;
+      color: #fa2da8 !important;
+      border: 1px solid transparent;
+      border-radius: 2px; }
+      .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+        color: #fa2da8 !important;
+        border: 1px solid #317d6e;
+        background-color: #d7efea;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7efea), color-stop(100%, #70c7b6));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #d7efea 0%, #70c7b6 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -moz-linear-gradient(top, #d7efea 0%, #70c7b6 100%);
+        /* FF3.6+ */
+        background: -ms-linear-gradient(top, #d7efea 0%, #70c7b6 100%);
+        /* IE10+ */
+        background: -o-linear-gradient(top, #d7efea 0%, #70c7b6 100%);
+        /* Opera 11.10+ */
+        background: linear-gradient(to bottom, #d7efea 0%, #70c7b6 100%);
+        /* W3C */ }
+      .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+        cursor: default;
+        color: #666 !important;
+        border: 1px solid transparent;
+        background: transparent;
+        box-shadow: none; }
+      .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        color: white !important;
+        border: 1px solid #fa2da8;
+        background-color: #fdb8e2;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdb8e2), color-stop(100%, #fa2da8));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #fdb8e2 0%, #fa2da8 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -moz-linear-gradient(top, #fdb8e2 0%, #fa2da8 100%);
+        /* FF3.6+ */
+        background: -ms-linear-gradient(top, #fdb8e2 0%, #fa2da8 100%);
+        /* IE10+ */
+        background: -o-linear-gradient(top, #fdb8e2 0%, #fa2da8 100%);
+        /* Opera 11.10+ */
+        background: linear-gradient(to bottom, #fdb8e2 0%, #fa2da8 100%);
+        /* W3C */ }
+      .dataTables_wrapper .dataTables_paginate .paginate_button:active {
+        outline: none;
+        background-color: #fb5fbd;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fb5fbd), color-stop(100%, #fa23a4));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #fb5fbd 0%, #fa23a4 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -moz-linear-gradient(top, #fb5fbd 0%, #fa23a4 100%);
+        /* FF3.6+ */
+        background: -ms-linear-gradient(top, #fb5fbd 0%, #fa23a4 100%);
+        /* IE10+ */
+        background: -o-linear-gradient(top, #fb5fbd 0%, #fa23a4 100%);
+        /* Opera 11.10+ */
+        background: linear-gradient(to bottom, #fb5fbd 0%, #fa23a4 100%);
+        /* W3C */
+        box-shadow: inset 0 0 3px #111; }
+    .dataTables_wrapper .dataTables_paginate .ellipsis {
+      padding: 0 1em; }
+  .dataTables_wrapper .dataTables_processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 40px;
+    margin-left: -50%;
+    margin-top: -25px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(112, 199, 182, 0)), color-stop(25%, rgba(112, 199, 182, 0.9)), color-stop(75%, rgba(112, 199, 182, 0.9)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(112, 199, 182, 0) 0%, rgba(112, 199, 182, 0.9) 25%, rgba(112, 199, 182, 0.9) 75%, rgba(112, 199, 182, 0) 100%);
+    background: -moz-linear-gradient(left, rgba(112, 199, 182, 0) 0%, rgba(112, 199, 182, 0.9) 25%, rgba(112, 199, 182, 0.9) 75%, rgba(112, 199, 182, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(112, 199, 182, 0) 0%, rgba(112, 199, 182, 0.9) 25%, rgba(112, 199, 182, 0.9) 75%, rgba(112, 199, 182, 0) 100%);
+    background: -o-linear-gradient(left, rgba(112, 199, 182, 0) 0%, rgba(112, 199, 182, 0.9) 25%, rgba(112, 199, 182, 0.9) 75%, rgba(112, 199, 182, 0) 100%);
+    background: linear-gradient(to right, rgba(112, 199, 182, 0) 0%, rgba(112, 199, 182, 0.9) 25%, rgba(112, 199, 182, 0.9) 75%, rgba(112, 199, 182, 0) 100%); }
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter,
+  .dataTables_wrapper .dataTables_info,
+  .dataTables_wrapper .dataTables_processing,
+  .dataTables_wrapper .dataTables_paginate {
+    color: #fa2da8; }
+  .dataTables_wrapper .dataTables_scroll {
+    clear: both; }
+    .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
+      *margin-top: -1px;
+      -webkit-overflow-scrolling: touch; }
+      .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > th, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > td, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > th, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > td {
+        vertical-align: middle; }
+      .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > th > div.dataTables_sizing,
+      .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > thead > tr > td > div.dataTables_sizing, .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > th > div.dataTables_sizing,
+      .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody > table > tbody > tr > td > div.dataTables_sizing {
+        height: 0;
+        overflow: hidden;
+        margin: 0 !important;
+        padding: 0 !important; }
+  .dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: 1px none #faf7f7; }
+  .dataTables_wrapper.no-footer div.dataTables_scrollHead table.dataTable,
+  .dataTables_wrapper.no-footer div.dataTables_scrollBody > table {
+    border-bottom: none; }
+  .dataTables_wrapper:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0; }
+
+@media screen and (max-width: 767px) {
+  .dataTables_wrapper .dataTables_info,
+  .dataTables_wrapper .dataTables_paginate {
+    float: none;
+    text-align: center; }
+  .dataTables_wrapper .dataTables_paginate {
+    margin-top: 0.5em; } }
+@media screen and (max-width: 640px) {
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter {
+    float: none;
+    text-align: center; }
+  .dataTables_wrapper .dataTables_filter {
+    margin-top: 0.5em; } }
+  </style>
+
+
+<body>
+<h1>Playing with Data</h1>
+
+<div class="row">
+  <div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+       <div class="card-content white-text">
+      <span class="card-title"><i class="fas fa-pen-fancy"></i> Writing</span>
+    <p><table id="issue_table" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Label</th>
+                    <!-- <th>Extn.</th>
+                    <th>Start date</th>
+                    <th>Salary</th> -->
+                </tr>
+            </thead>
+
+        </table></p>
+        <!-- <table id="table_test" class="highlight striped responsive-table teal lighten-2 black-text" style="width:100%"></table> -->
+        <ul id="table_test" class="collection"></ul>
+      </div>
+      </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// $(document).ready(function() {
+//     var issue_table = $('#issue_table').DataTable( {
+//         processing: true,
+//         responsive: true,
+//         ajax: {
+//           url: "writing.json",
+//           dataSrc: "issues"
+//         },
+//         columns:
+//         [
+//             { "data": "title",
+//               "render": function(data, type, row, meta){
+//                 if(type === 'display'){
+//                   data = '<a href="' + row['url'] + '">' + data + '</a>';
+//                 }
+//                 return data;
+//               }
+//
+//            },
+//             { "data": "created_ts" },
+//             { "data": "labels"},
+//             // { "data": "id" },
+//             // { "data": "id" },
+//         ]
+//     } );
+// } );
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://medium.com/feed/@HelanaBakhsh",
+  "method": "GET"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log("ghghgh", response);
+});
+
+//xml
+
+// $(document).ready(function () {
+//        $.ajax({
+//            type: "GET",
+//            url: "https://medium.com/feed/@HelanaBakhsh",
+//            cache: false,
+//            dataType: "xml",
+//            success: function(xml) {
+//              console.log(xml);
+//              $(xml).find('channel').each(function(){
+//                   $(this).find("item").each(function(){
+//                     $(this).find("title").each(function(){
+//                       var title = $(this).text();
+//                       console.log(title);
+//                     });
+//                   });
+//               });
+//            }
+//        });
+//    });
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    myFunction(this);
+    }
+  };
+  xhttp.open("GET", "https://medium.com/feed/@HelanaBakhsh", true);
+  xhttp.send();
+}
+
+// function xmlToJson(xml) {
+//   //create the return Object
+//   var obj = {};
+//
+//   if (xml.nodeType == 1) { //element
+//     //do attributes
+//     if (xml.attributes.length > 0) {
+//       obj["@attributes"] = {};
+//       for (var j = 0; j < xml.attributes.length; j++) {
+//         var attribute = xml.attributes.item(j);
+//         obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+//       }
+//     }
+//   } else if (xml.nodeType == 3) { //text
+//     obj = xml.nodeValue;
+//   }
+// }
+
+function myFunction(xml) {
+  console.log(xml);
+  var i;
+  var xmlDoc = xml.responseXML;
+  console.log("blah", xmlDoc);
+  var table="";
+  var x = xmlDoc.getElementsByTagName("channel");
+console.log("x", x);
+  for (i = 0; i <x.length; i++) {
+
+  }
+
+  for (i = 0; i <x.length; i++) {
+
+    console.log(x[i].childNodes[19].children["0"].childNodes["0"].nodeValue);
+    item = x[i].getElementsByTagName("item");
+    console.log("item", item);
+    for (i = 0; i <item.length; i++) {
+      title = item[i].childNodes[1].childNodes["0"].data;
+      url = item[i].childNodes[3].childNodes["0"].data;
+      author = item[i].childNodes[9].childNodes["0"].data;
+      pubdate = item[i].childNodes[11].childNodes["0"].data;
+      console.log(pubdate);
+      table += "<li class='collection-item avatar teal lighten-2'><img src='../images/devices/017-database-4.png' width='25px' alt='' class='circle'><span class='title'>" + "<a href=" + url + ">" +
+      title + "</a>" +
+      "</span><p>" + author + "<br> Second Line </p>";
+    }
+
+   // +
+    // x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue +
+    // "</td><td>" + "<a href='" +
+    // x[i].getElementsByTagName("link")[0].childNodes[0].nodeValue + "'/>" +
+    // // x[i].getElementsByTagName("link")[0].children[2].firstChild.data +
+    // "</td></tr>";
+  }
+  document.getElementById("table_test").innerHTML = table;
+}
+loadDoc();
+</script>
+<!-- ["0"].childNodes[19].childNodes[1].childNodes["0"].data -->
+
+<script src="js/main.js"></script>
+
+<!-- Scripts -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+<script src="js/materialize.min.js"></script>
+
+<!-- External libraries -->
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/ScrollMagic.min.js"></script>
+<script src="js/animation.gsap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+
+
+<!-- Initialization script -->
+<script src="js/startup.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
