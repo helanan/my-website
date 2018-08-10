@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Helana Nosrat</title>
+
+    <link rel="stylesheet" href="css/startup-materialize.min.css">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="datatables.html">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.0/b-1.5.2/b-colvis-1.5.1/b-flash-1.5.2/b-html5-1.5.2/b-print-1.5.2/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.4.0/r-2.2.2/rg-1.0.3/rr-1.2.4/sc-1.5.0/sl-1.2.6/datatables.min.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" /> -->
+
+    <!-- Google Analytics -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101949055-1', 'auto');
+  ga('send', 'pageview');
+  ga('set', 'userId', {{USER_ID}});
+
+</script>
+
+</head>
+<style>
+  #medium_icon {
+        color: #e91d8c75;
+        margin: 5px;
+  }
+
+  #pubdate_p {
+    margin-left: 55px;
+  }
+</style>
+
+
+<body>
+<h1>Playing with Data</h1>
+
+<div class="row">
+  <div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+       <div class="card-content white-text">
+      <span class="card-title"><i class="fas fa-pen-fancy"></i> Writing</span>
+    <p><table id="issue_table" class="display" style="width:100%">
+            <!-- <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Label</th>
+                    <th>Extn.</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </thead> -->
+
+        </table></p>
+        <!-- <table id="table_test" class="highlight striped responsive-table teal lighten-2 black-text" style="width:100%"></table> -->
+        <ul id="table_test" class="collection"></ul>
+      </div>
+      </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://medium.com/feed/@HelanaBakhsh",
+  "method": "GET"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log("response completed successfully", response);
+});
+
+//xml
+
+// $(document).ready(function () {
+//        $.ajax({
+//            type: "GET",
+//            url: "https://medium.com/feed/@HelanaBakhsh",
+//            cache: false,
+//            dataType: "xml",
+//            success: function(xml) {
+//              console.log(xml);
+//              $(xml).find('channel').each(function(){
+//                   $(this).find("item").each(function(){
+//                     $(this).find("title").each(function(){
+//                       var title = $(this).text();
+//                       console.log(title);
+//                     });
+//                   });
+//               });
+//            }
+//        });
+//    });
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    myFunction(this);
+    }
+  };
+  xhttp.open("GET", "https://medium.com/feed/@HelanaBakhsh", true);
+  xhttp.send();
+}
+
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="";
+  var x = xmlDoc.getElementsByTagName("channel");
+console.log("x", x);
+  for (i = 0; i <x.length; i++) {
+
+  }
+
+  for (i = 0; i <x.length; i++) {
+
+    item = x[i].getElementsByTagName("item");
+    console.log("item", item);
+    for (i = 0; i <item.length; i++) {
+      title = item[i].childNodes[1].childNodes["0"].data;
+      url = item[i].childNodes[3].childNodes["0"].data;
+      author = item[i].childNodes[9].childNodes["0"].data;
+      pubdate = item[i].childNodes[19].childNodes["0"].data;
+      data = item[i].childNodes[23].childNodes["0"].data;
+      categories = item[i].childNodes[5].nextElementSibling.childNodes["0"].data;
+      categories_two = item[i].children[4].childNodes["0"].data;
+      categories_three = item[i].children[5].childNodes["0"].data;
+      categories_four = item[i].children[6].childNodes["0"].data;
+      // categories_five = item[i].children[7].childNodes["0"].data;
+      table += "<li class='collection-item avatar teal lighten-2'><i id='medium_icon' class='fab fa-medium-m fa-3x'></i><span class='title'>" + "<a href=" + url + ">" +
+      title + "</a>" +
+      "</span><p id='pubdate_p'> " +  pubdate +  "<br><br><a class='waves-effect waves-light btn read'><i class='material-icons right'><i class='fab fa-readme'></i></i>Click to Read!</a></span><br> <div class='row read_content'><div class='col s12 m5'><div class='card-panel teal'><span class='white-text'>" + data + "</span></div></div></div> <span class='new badge' data-badge-caption='" + categories + "'></span></span><br><span class='new badge' data-badge-caption='" + categories_two + "'></span><br><span class='new badge' data-badge-caption='" + categories_three + "'></span><br><span class='new badge' data-badge-caption='" + categories_four + "'></span>   </p><br>";
+
+    }
+  }
+  document.getElementById("table_test").innerHTML = table;
+  $( "div.row.read_content" ).each(function() {
+      $( "div.row.read_content" ).css("display", "none");
+  });
+  $("a.waves-effect.waves-light.btn.read").each(function(index) {
+     $(this).on("click", function(){
+      // console.log("bye");
+  $("div.row.read_content").toggle( "slow" );
+  $(".card-panel.teal").css("width", "fit-content");
+
+});
+});
+}
+loadDoc();
+
+
+function clickMe() {
+
+}
+
+// $( "#pubdate_p > a" ).each(function( index ) {
+//   console.log("blah");
+// });
+
+</script>
+<!-- ["0"].childNodes[19].childNodes[1].childNodes["0"].data -->
+
+<script src="js/main.js"></script>
+
+<!-- Scripts -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+<script src="js/materialize.min.js"></script>
+
+<!-- External libraries -->
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/ScrollMagic.min.js"></script>
+<script src="js/animation.gsap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+
+
+<!-- Initialization script -->
+<script src="js/startup.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>

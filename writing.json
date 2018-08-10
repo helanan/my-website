@@ -1,0 +1,23 @@
+{
+	"issues": [{
+		"id": 1,
+		"iid": 100,
+		"created_ts": "06-29-2018",
+		"updated_ts": "06-29-2018",
+		"closed_ts": "",
+		"labels": ["HTML", "CSS", "Front-End"],
+		"title": "Interview Questions To Master for HTML/CSS Front-End Designer Roles",
+		"url": "https://medium.com/@HelanaBakhsh/interview-questions-to-master-for-html-css-front-end-designer-roles-53cfc7ca9d3c",
+		"desc": "Sample Body\n\n| Header 1 | Header 2 | \n| -------- | -------- |\n| Value 1 | Value 2 |"
+	}, {
+		"id": 1,
+		"iid": 101,
+		"created_ts": "06-29-2018",
+		"updated_ts": "06-29-2018",
+		"closed_ts": "",
+		"labels": ["Technology", "Marketing", "Retail"],
+		"title": "The Burt’s Bee’s Marketing Philosophy: How to effectively promote your product while raising awareness",
+		"url": "https://medium.com/@HelanaBakhsh/the-burts-bee-s-marketing-philosophy-how-to-effectively-promote-your-product-while-raising-203b29731451",
+		"desc": "|**Jobs need to be considered for Rewrite for the below components as they are Incompatible with T6 and Modify the jobs for point 4 & 5 during migration. PLEASE NOTE, IT APPLIES FOR CR's AS WELL:**|\n|------- |\n\n| **S.No** |**Issue** |**Notes**| \n| ----- |------- |------- |\n|1|tParallelize|tFixedflowinput> tFlowtoIterate can be used as an alternative for tParalleize|\n|2|tSetDynamicSchema|||  \n|3|All tSAP Components|Example:tSAPInput/tSAPIdoc/tHMap etc. Jobs contain these components will be considered for Rewrite|\n|4|tTSCGlobalCatcher|Link all 3 catchers(tLogCatcher/tStatcatcher/tAssertCatcher) to tTSCGlobalCatcher will be added during migrations|\n|5|Context Parameters|Parent and Child links. Call the Child Job contexts from Parent Job |\n\n\n|**Jobs will ONLY be modified, if any of the below components cause issue while migrating from T5 to T6:**|\n|------- |\n\n| **S.No** |**Issue** |**Notes**|\n| ----- | ------- |------- |------- |\n|6|tSendMail|tTSCSendEmail will be replaced|\n|7|tRest|tRESTClient will be replaced|\n|8|tAddCRCRow|tTSCAddHASHRow will be replaced|\n\n\n|**Below rules need to be followed for new DI Development(BEST PRACTICES):**|\n|------- |\n\n| **S.No** |**T5** |**T6**| \n| ----- | ------- |------- |\n|9|tREST|tRESTClient|\n|10|tJava|tTSCEventLogger and tFlowmeter> tFlowmeterCatcher will be used accordingly|\n|11|tParallelize|(tFixedflowinput> tFlowtoIterate) logic can be used as an alternative|\n|12|tCreateTable|DBA permissions will not allow going forward, DON'T USE|\n|13|tSendMail|tTSCSendEmail|\n|14|tAddCRCRow|tTSCAddHASHRow|\n|15|tContextLoad|Should not be used for Dynamic Context Loading|\n|16|tContextDump|Should not be used for Dynamic Context Loading|\n|17|tSAP Components|No longer available. USE API approach|\n|18|Catchers|tTSCGlobalCatcher, to send stats and logs to log server|\n|19|Job Pages|Business Models will be created|\n\n\n|**Below additional tasks for T6 Migration:**|\n|------- |\n\n| **S.No** |**Issue** |**Notes**| \n| ----- | ------- |------- |\n|20|Scheduling|New UI for T6. Setting up Talend Jobs in new scheduler|\n|21|Documentation|UT Results. Will check, if jobs are being executed successfully in Dev T6|\n|22|T6 Migration| All Talend Jobs(In-Scope) will be moved to DEV T6|\n|23|Confluence Job Page| Need to integrate Confluence in GIT for existing. New jobs will have Business Models |\n|24|Run Book|Adding Run book to New Scheduler| Need to understand new scheduler to add Run Books|\n|25|CRM, POS, SITE PRICING, ANY ONGOING CR's T5|Respective teams will take care of migration and other steps|\n\n@inf_nbanda \n\n\n\n\n\n\n"
+	}]
+}

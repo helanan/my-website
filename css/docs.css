@@ -246,3 +246,12 @@ a.button-collapse.top-nav.full {
 .black .pricing-table {
   color: #eee;
 }
+/*
+DATATABLE STYLES */
+
+.pricing-table{
+ margin-top:450px;border:2px solid #1de9c3
+ }
+ table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+     background-color: black;
+ }
